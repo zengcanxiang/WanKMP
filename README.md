@@ -19,7 +19,7 @@
 * `/iosApp` 包含 iOS 应用程序。即使您与 Compose 多平台共享 UI，
   也需要此 iOS 应用程序入口点。这也是您应该为您的项目添加 SwiftUI 代码的地方。
 
-分支名：https://github.com/zengcanxiang/WanKMP/tree/master
+分支名：https://github.com/zengcanxiang/WanKMP/tree/main
 
 参考资料链接：
 
