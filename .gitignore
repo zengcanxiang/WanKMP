@@ -1,0 +1,6 @@
+/build/
+/.kotlin/
+/.gradle/
+/.idea/
+/composeApp/.gradle/
+/composeApp/build/
