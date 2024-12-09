@@ -1,0 +1,1 @@
+datastore（、https://medium.com/@mohaberabi98/local-preferences-in-kotlin-multiplatform-using-datastore-c23ec677a35f,https://github.com/russhwolf/multiplatform-settings）,
