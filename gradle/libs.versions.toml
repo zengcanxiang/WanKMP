@@ -8,45 +8,71 @@ androidx-appcompat = "1.7.0"
 androidx-constraintlayout = "2.1.4"
 androidx-core-ktx = "1.13.1"
 androidx-espresso-core = "3.6.1"
-androidx-lifecycle = "2.8.3"
 androidx-material = "1.12.0"
 androidx-test-junit = "1.2.1"
+# 现在官方的不支持kmp。只能用在android上
+constraintlayout = "2.2.0"
 compose-multiplatform = "1.7.0"
 junit = "4.13.2"
 kotlin = "2.0.21"
 kotlinx-coroutines = "1.9.0"
 kotlinx-datetime = "0.6.1"
-ktor="3.0.2"
-
+ktor = "3.0.2"
+logback_version = "1.5.6"
+slf4j_version = "1.7.9"
+napier = "2.7.1"
+# kmp迁移过来的android库 -》https://mvnrepository.com/artifact/org.jetbrains.androidx.lifecycle/lifecycle-viewmodel-compose
+kmp-lifecycle = "2.8.4"
+arrow = "1.2.4"
 
 [libraries]
-kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
-kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
-junit = { group = "junit", name = "junit", version.ref = "junit" }
+#kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+#kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
+#junit = { group = "junit", name = "junit", version.ref = "junit" }
+#androidx-test-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-junit" }
+#androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "androidx-espresso-core" }
+# android相关独立依赖
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidx-core-ktx" }
-androidx-test-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-junit" }
-androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "androidx-espresso-core" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidx-appcompat" }
 androidx-material = { group = "com.google.android.material", name = "material", version.ref = "androidx-material" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "androidx-constraintlayout" }
-androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
-androidx-lifecycle-viewmodel = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-viewmodel", version.ref = "androidx-lifecycle" }
-androidx-lifecycle-runtime-compose = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
-kotlinx-coroutines-swing = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-swing", version.ref = "kotlinx-coroutines" }
-kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
-kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinx-coroutines" }
+androidx-compose-activity = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
+kmp-android-kotlinx-coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinx-coroutines" }
+kmp-android-ktor-client = { group = "io.ktor", name = "ktor-client-okhttp", version.ref = "ktor" }
 
-kotlinx-datetime = { group = "org.jetbrains.kotlinx", name = "kotlinx-datetime", version.ref = "kotlinx-datetime" }
-ktor-client-core = { group = "io.ktor", name = "ktor-client-core", version.ref = "ktor" }
-ktor-client-android = { group = "io.ktor", name = "ktor-client-okhttp", version.ref = "ktor" }
-ktor-client-ios = { group = "io.ktor", name = "ktor-client-ios", version.ref = "ktor" }
-ktor-client-js = { group = "io.ktor", name = "ktor-client-js", version.ref = "ktor" }
-ktor-client-desktop = { group = "io.ktor", name = "ktor-client-cio", version.ref = "ktor" }
-ktor-serialization = {group = "io.ktor", name = "ktor-serialization-kotlinx-json",version.ref = "ktor"}
-# ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor" }
-# ktor-client-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktor" }
+# iOS相关独立依赖
+kmp-ios-ktor-client = { group = "io.ktor", name = "ktor-client-ios", version.ref = "ktor" }
 
+# desktop相关独立依赖
+kmp-desktop-kotlinx-coroutines = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-swing", version.ref = "kotlinx-coroutines" }
+kmp-desktop-ktor-client = { group = "io.ktor", name = "ktor-client-cio", version.ref = "ktor" }
 
+# js相关独立依赖
+kmp-js-ktor-client = { group = "io.ktor", name = "ktor-client-js", version.ref = "ktor" }
+
+# kmp官方通用依赖
+kmp-common-lifecycle-viewmodel = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "kmp-lifecycle" }
+kmp-common-lifecycle-runtime = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "kmp-lifecycle" }
+kmp-common-kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
+kmp-common-kotlinx-datetime = { group = "org.jetbrains.kotlinx", name = "kotlinx-datetime", version.ref = "kotlinx-datetime" }
+
+# kmp第三方通用依赖
+kmp-common-ktor-client-core = { group = "io.ktor", name = "ktor-client-core", version.ref = "ktor" }
+kmp-common-ktor-negotiation = { group = "io.ktor", name = "ktor-client-content-negotiation", version.ref = "ktor" }
+kmp-common-ktor-serialization = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
+kmp-common-ktor-logger-interfaces = { group = "io.ktor", name = "ktor-client-logging", version.ref = "ktor" }
+kmp-common-plugin-napier = { group = "io.github.aakira", name = "napier", version.ref = "napier" }
+kmp-common-plugin-arrow-core = { module = "io.arrow-kt:arrow-core", version.ref = "arrow" }
+kmp-common-plugin-arrow-fx-coroutines = { module = "io.arrow-kt:arrow-fx-coroutines", version.ref = "arrow" }
+
+[bundles]
+# https://github.com/ktorio/ktor
+kmp-common-ktor = ["kmp-common-ktor-client-core", "kmp-common-ktor-logger-interfaces", "kmp-common-ktor-negotiation", "kmp-common-ktor-serialization"]
+# https://github.com/JetBrains/compose-multiplatform
+kmp-common-compose = ["kmp-common-lifecycle-viewmodel", "kmp-common-lifecycle-runtime"]
+kmp-common-kotlinx = ["kmp-common-kotlinx-coroutines-core", "kmp-common-kotlinx-datetime"]
+kmp-common-plugin = ["kmp-common-plugin-napier","kmp-common-plugin-arrow-core","kmp-common-plugin-arrow-fx-coroutines"]
+androidx = ["androidx-appcompat", "androidx-compose-activity", "androidx-constraintlayout", "androidx-core-ktx", "androidx-material"]
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
