@@ -57,12 +57,12 @@ kotlin {
 
         androidMain.dependencies {
             implementation(compose.preview)
-            implementation(libs.androidx.activity.compose)
-            implementation(libs.ktor.client.android)
-            implementation(libs.kotlinx.coroutines.android)
+            implementation(libs.bundles.androidx)
+            implementation(libs.kmp.android.ktor.client)
+            implementation(libs.kmp.android.kotlinx.coroutines)
         }
         iosMain.dependencies {
-            implementation(libs.ktor.client.ios)
+            implementation(libs.kmp.ios.ktor.client)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -71,20 +71,19 @@ kotlin {
             implementation(compose.ui)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
-            implementation(libs.androidx.lifecycle.viewmodel)
-            implementation(libs.androidx.lifecycle.runtime.compose)
-            implementation(libs.kotlinx.datetime)
-            implementation(libs.ktor.client.core)
-            implementation(libs.ktor.serialization)
-            implementation(libs.kotlinx.coroutines.core)
+
+            implementation(libs.bundles.kmp.common.ktor)
+            implementation(libs.bundles.kmp.common.kotlinx)
+            implementation(libs.bundles.kmp.common.compose)
+            implementation(libs.bundles.kmp.common.plugin)
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
-            implementation(libs.kotlinx.coroutines.swing)
-            implementation(libs.ktor.client.desktop)
+            implementation(libs.kmp.desktop.kotlinx.coroutines)
+            implementation(libs.kmp.desktop.ktor.client)
         }
         wasmJsMain.dependencies {
-            implementation(libs.ktor.client.js)
+            implementation(libs.kmp.js.ktor.client)
         }
     }
 }
@@ -118,6 +117,7 @@ android {
 
 dependencies {
     debugImplementation(compose.uiTooling)
+    debugImplementation(compose.components.uiToolingPreview)
 }
 
 compose.desktop {
