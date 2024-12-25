@@ -128,6 +128,7 @@ compose.desktop {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
             packageName = "cn.zengcanxiang.wankmp"
             packageVersion = "1.0.0"
+            includeAllModules = true
         }
     }
 }

@@ -17,6 +17,7 @@
 | 设置运行命令               | https://www.jetbrains.com/help/kotlin-multiplatform-dev/compose-multiplatform-create-first-app.html#run-your-application                                                         |
 | github kmp simple 前排 | https://github.com/topics/kotlin-multiplatform-sample                                                                                                                            |
 | touchlab kmp 博客列表    | https://www.touchlab.co/tag/kotlin-multiplatform/                                                                                                                                |
+| 出色的github库           | https://github.com/AAkira/Kotlin-Multiplatform-Libraries                                                                                                                         |
 | 看到再加 ☺️              |                                                                                                                                                                                  |
 
 ### 较为细致的子文档
@@ -29,33 +30,34 @@
 | 能力          | 文档地址                                              | 
 |-------------|---------------------------------------------------|
 | 如何调试各个平台    | [README_DEBUG.md](./README/debug/README_DEBUG.md) |
-| 如何获取各个平台的产物 |                                                   | 
+| 如何获取各个平台的产物 | [README_BUILD.md](./README/build/README_BUILD.md)   | 
 
 ## kmp依赖
 
 协程，flow
 
-| 库                         | 文档地址                                                                      | 分支                                                                                                 | 截图 |
-|---------------------------|---------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------| --|
-| 网络-ktor                   | [README_KTOR.md](./README/ktor/README_KTOR.md)                            | [feature/dependencies/ktor](https://github.com/zengcanxiang/WanKMP/tree/feature/dependencies/ktor) ||
-| 序列化-kotlinx-serialization | [README_SERIALIZATION.md](./README/serialization/README_SERIALIZATION.md) |                                                                                                    ||
-| 数据库-room                  |                                                                           |                                                                                                    ||
-| 时间-kotlinx-datetime       | [README_DATETIME.md](./README/datetime/README_DATETIME.md)                |[feature/dependencies/datetime](https://github.com/zengcanxiang/WanKMP/tree/feature/dependencies/datetime) |![datetime 截图](./README/datetime/debug_datetime_capture.png "datetime 截图")
- |
-| 分页加载-paging               | [README_PAGING.md](./README/paging/README_PAGING.md)                      |                                                                                                    ||
-| 键值对                       | [README_DATASTORE.md](./README/datastore/README_DATASTORE.md)             |                                                                                                    ||
-| 生命周期和viewModel            |                                                                           |                                                                                                    ||
-| 依赖注入                      |                                                                           |                                                                                                    ||
+| 库                         | 文档地址                                                                      | 分支                                                                                                         | 截图                                                                         |
+|---------------------------|---------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------|
+| 网络-ktor                   | [README_KTOR.md](./README/ktor/README_KTOR.md)                            | [feature/dependencies/ktor](https://github.com/zengcanxiang/WanKMP/tree/feature/dependencies/ktor)         |                                                                            |
+| 序列化-kotlinx-serialization | [README_SERIALIZATION.md](./README/serialization/README_SERIALIZATION.md) |                                                                                                            |                                                                            |
+| 数据库-room                  |                                                                           |                                                                                                            |                                                                            |
+| 时间-kotlinx-datetime       | [README_DATETIME.md](./README/datetime/README_DATETIME.md)                | [feature/dependencies/datetime](https://github.com/zengcanxiang/WanKMP/tree/feature/dependencies/datetime) | ![datetime 截图](./README/datetime/debug_datetime_capture.png "datetime 截图") |
+| 分页加载-paging               | [README_PAGING.md](./README/paging/README_PAGING.md)                      |                                                                                                            |                                                                            |
+| 键值对                       | [README_DATASTORE.md](./README/datastore/README_DATASTORE.md)             |                                                                                                            |                                                                            |
+| 生命周期和viewModel            |                                                                           |                                                                                                            |                                                                            |
+| 依赖注入                      |                                                                           |                                                                                                            |                                                                            |
 
 ## kmp框架
 
 kmp框架 系统时间变化监听。可见性埋点, 混淆，资源携带 字符 图片、视频 pag
-| 库 | 文档地址       
-|lottie |https://github.com/alexzhirkevich/compottie |
-|权限申请 | |
-|网络状态监听||
-|图片加载||
-|路由||
+
+| 库      | 文档地址                                        |      
+|--------|---------------------------------------------|
+| lottie | https://github.com/alexzhirkevich/compottie |
+| 权限申请   |                                             |
+| 网络状态监听 |                                             |
+| 图片加载   |                                             |
+| 路由     |                                             |
 
 ### 一些重点第三方库或者开源APP
 
