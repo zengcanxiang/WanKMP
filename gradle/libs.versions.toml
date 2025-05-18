@@ -69,7 +69,7 @@ kmp-common-plugin-arrow-fx-coroutines = { module = "io.arrow-kt:arrow-fx-corouti
 # https://github.com/ktorio/ktor
 kmp-common-ktor = ["kmp-common-ktor-client-core", "kmp-common-ktor-logger-interfaces", "kmp-common-ktor-negotiation", "kmp-common-ktor-serialization"]
 # https://github.com/JetBrains/compose-multiplatform
-kmp-common-compose = ["kmp-common-lifecycle-viewmodel", "kmp-common-lifecycle-runtime"]
+kmp-common-lifecycle = ["kmp-common-lifecycle-viewmodel", "kmp-common-lifecycle-runtime"]
 kmp-common-kotlinx = ["kmp-common-kotlinx-coroutines-core", "kmp-common-kotlinx-datetime"]
 kmp-common-plugin = ["kmp-common-plugin-napier","kmp-common-plugin-arrow-core","kmp-common-plugin-arrow-fx-coroutines"]
 androidx = ["androidx-appcompat", "androidx-compose-activity", "androidx-constraintlayout", "androidx-core-ktx", "androidx-material"]

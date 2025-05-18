@@ -74,7 +74,7 @@ kotlin {
 
             implementation(libs.bundles.kmp.common.ktor)
             implementation(libs.bundles.kmp.common.kotlinx)
-            implementation(libs.bundles.kmp.common.compose)
+            implementation(libs.bundles.kmp.common.lifecycle)
             implementation(libs.bundles.kmp.common.plugin)
         }
         desktopMain.dependencies {
